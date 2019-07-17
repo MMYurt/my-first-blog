@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Stock
 from .serializers import StockSerializer
+from django.shortcuts import render
 
 #Lists all stocks or create a new one
 
@@ -24,3 +25,5 @@ class StockList(APIView):
 
 
 
+def post_list(request):
+    return render(request, 'post_list.html', {})
