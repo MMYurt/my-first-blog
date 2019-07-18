@@ -26,4 +26,5 @@ class StockList(APIView):
 
 
 def post_list(request):
-    return render(request, 'post_list.html', {})
+    stocks = Stock.objects.all()
+    return render(request, 'post_list.html', {'stocks':stocks})
