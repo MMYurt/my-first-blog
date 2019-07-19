@@ -1,0 +1,10 @@
+{% extends 'companies/base.html' %}
+
+{% block content %}
+    {% for stock in stocks %}
+        <div class="post">
+            <h2><a href =''>{{stock.ticker}}</a></h2>
+            <p>Hisse senedi hacmi</p>{{stock.volume|linebreaksbr}}
+         </div>
+    {% endfor %}
+{% endblock %}

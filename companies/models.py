@@ -1,9 +1,9 @@
-#Veritabanı veri modelleri
+# Veritabanı veri modelleri
 
 from django.db import models
 
-class Stock(models.Model):
 
+class Stock(models.Model):
     ticker = models.CharField(max_length=10)
     open = models.FloatField()
     close = models.FloatField()
@@ -14,6 +14,3 @@ class Stock(models.Model):
 
     def __str__(self):
         return self.ticker
-
-
-

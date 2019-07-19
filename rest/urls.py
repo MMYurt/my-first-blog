@@ -24,6 +24,7 @@ urlpatterns = [
     path('stocks/', views.StockList.as_view()),
     path('stocks', views.StockList.as_view()),
     path('', views.post_list, name='post_list'),
+    path('stocks/new/', views.stock_new, name='stock_new'),
 
 ]
 

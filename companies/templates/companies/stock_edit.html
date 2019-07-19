@@ -1,0 +1,10 @@
+{% extends 'companies/base.html' %}
+
+{% block content %}
+
+    <h1>Yeni Stock</h1>
+    <form method="POST" class="stock-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Kaydet</button>
+    </form>
+{% endblock %}
